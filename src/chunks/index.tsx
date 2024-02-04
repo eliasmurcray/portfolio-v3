@@ -9,7 +9,7 @@ class App extends React.Component {
 	}
 
 	render(): React.JSX.Element {
-		return <p>testing changes!</p>;
+		return <p>Hello world!</p>;
 	}
 }
 
