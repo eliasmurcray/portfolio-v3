@@ -1,0 +1,147 @@
+.hero {
+	position: relative;
+	z-index: 1;
+	margin: 0;
+	height: min(100vh, 900px);
+	background-color: #121218;
+	background: linear-gradient(#eeeef4, #ffffff);
+	clip-path: inset(0);
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+.hero #thumbnail-slider {
+	position: absolute;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	row-gap: 1rem;
+	width: 50%;
+	height: 100%;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	pointer-events: none;
+}
+
+.hero .fade-overlay {
+	position: absolute;
+	z-index: 2;
+	background: linear-gradient(#eeeef4 0px, #00000000 100px);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
+
+.hero .project-thumbnail {
+	display: block;
+	position: absolute;
+	transition: top 5s linear;
+}
+
+.hero .content {
+	padding: 0 100px;
+	max-width: 800px;
+	box-sizing: border-box;
+}
+
+.hero .content p {
+	margin: 0;
+	font-size: 1rem;
+}
+
+.hero .content h1 {
+	font-size: 2.4rem;
+	line-height: 2;
+	margin: 0;
+	position: relative;
+	width: auto;
+}
+
+.sideways-text {
+	position: absolute;
+}
+
+.hero .content a {
+	display: inline-block;
+	text-decoration: none;
+	background-color: #364aff;
+	color: #ffffff;
+	padding: 8px 16px;
+	border: 0;
+	margin-top: 12px;
+	font-size: 0.875rem;
+	border-radius: 4px;
+	filter: none;
+	transition: filter .1s ease-in-out;
+}
+
+.hero .content a:hover {
+	filter: brightness(105%);
+}
+
+.hero-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	width: 100%;
+	height: 55px;
+	z-index: 3;
+}
+
+.hero-header nav {
+	height: 100%;
+}
+
+.hero-header ul {
+	margin: 0;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	column-gap: 2rem;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 40px;
+}
+
+.hero-header ul li {
+	display: inline-block;
+}
+
+.hero-header ul li a {
+	color: inherit;
+	text-decoration: none;
+	font-size: 0.875rem;
+}
+
+.highlight {
+	position: relative;
+}
+
+.highlight::after {
+	position: absolute;
+	content: "";
+	top: -2px;
+	left: -2px;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	background-color: #ffde64;
+	z-index: -1;
+}
+
+@keyframes slide-up {
+	0% {
+		transform: translateY(70px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
