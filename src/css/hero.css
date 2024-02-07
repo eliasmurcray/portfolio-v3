@@ -51,18 +51,27 @@
 .hero .content p {
 	margin: 0;
 	font-size: 1rem;
+	line-height: 1.8;
 }
 
 .hero .content h1 {
-	font-size: 2.4rem;
+	font-size: 4rem;
 	line-height: 2;
 	margin: 0;
-	position: relative;
-	width: auto;
+	font-family: "Cormorant Garamond", Garamond;
+	font-weight: 500;
+	display: inline-block;
+	transform: scaleY(2);
 }
 
-.sideways-text {
+.hero .content h1 .sideways-text {
+	font-size: 1.25rem;
+	font-weight: 300;
+	font-family: Open Sans;
 	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(100%, 50%) rotate(90deg);
 }
 
 .hero .content a {
@@ -118,21 +127,6 @@
 	color: inherit;
 	text-decoration: none;
 	font-size: 0.875rem;
-}
-
-.highlight {
-	position: relative;
-}
-
-.highlight::after {
-	position: absolute;
-	content: "";
-	top: -2px;
-	left: -2px;
-	width: calc(100% + 4px);
-	height: calc(100% + 4px);
-	background-color: #ffde64;
-	z-index: -1;
 }
 
 @keyframes slide-up {
